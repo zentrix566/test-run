@@ -1,43 +1,43 @@
 # test-run
 
-Personal test repository for experimenting and testing various code snippets, concepts, and projects.
+个人测试仓库，用于试验和测试各种代码片段、概念和项目。
 
-## COROS FIT File Parser
+## 高驰 COROS FIT 文件解析器
 
-Parse and extract data from COROS/ Garmin FIT format exported exercise files.
+解析从高驰运动手表导出的 FIT 格式运动数据文件。
 
-### Contents
-- `476407660602753025.fit` - Original FIT file exported from COROS (42.4km run on 2026-03-28)
-- `parse_fit.py` - Extract exercise summary from FIT file
-- `export_fit_details.py` - Export all GPS track points to CSV
-- `fit_export.csv` - Exported detailed GPS data (15,060 points) with coordinates, heart rate, speed
+### 文件说明
+- `476407660602753025.fit` - 从 COROS 导出的原始 FIT 文件（2026-03-28 的 42.4 公里跑步）
+- `parse_fit.py` - 从 FIT 文件提取运动摘要
+- `export_fit_details.py` - 导出所有 GPS 轨迹点到 CSV
+- `fit_export.csv` - 导出的详细 GPS 数据（共 15,060 个点），包含坐标、心率、速度等信息
 
-### Exercise Summary
-| Metric | Value |
+### 运动摘要
+| 参数 | 数值 |
 |--------|-------|
-| **Sport** | Running |
-| **Date** | 2026-03-28 |
-| **Distance** | **42.40 km** |
-| **Time** | 4h 10m 59s |
-| **Calories** | 3745 kcal |
-| **Avg Heart Rate** | 153 bpm |
-| **Max Heart Rate** | 161 bpm |
-| **Avg Pace** | 5'53"/km |
-| **Total Ascent** | 47 m |
-| **Total Descent** | 50 m |
+| **运动类型** | 跑步 |
+| **日期** | 2026-03-28 |
+| **距离** | **42.40 公里** |
+| **运动时间** | 4 小时 10 分 59 秒 |
+| **卡路里** | 3745 大卡 |
+| **平均心率** | 153 次/分钟 |
+| **最大心率** | 161 次/分钟 |
+| **平均配速** | 5'53"/公里 |
+| **总爬升** | 47 米 |
+| **总下降** | 50 米 |
 
-### Usage
+### 使用方法
 ```bash
-# Install dependency
+# 安装依赖
 pip install fitparse
 
-# Extract summary
-python parse_fit.py your_file.fit
+# 提取摘要
+python parse_fit.py 你的文件.fit
 
-# Export detailed GPS data to CSV
-python export_fit_details.py your_file.fit
+# 导出详细 GPS 数据到 CSV
+python export_fit_details.py 你的文件.fit
 ```
 
-## License
+## 许可证
 
 MIT © [zentrix566](https://github.com/zentrix566)
