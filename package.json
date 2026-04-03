@@ -1,0 +1,30 @@
+{
+  "name": "test-run",
+  "version": "1.0.0",
+  "description": "个人测试仓库，用于试验和测试各种代码片段、概念和项目。",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zentrix566/test-run.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/zentrix566/test-run/issues"
+  },
+  "homepage": "https://github.com/zentrix566/test-run#readme",
+  "devDependencies": {
+    "vite": "^8.0.3"
+  },
+  "dependencies": {
+    "fit-file-parser": "^2.3.3"
+  }
+}

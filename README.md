@@ -1,7 +1,96 @@
-# test-run
+# FIT 运动轨迹可视化
 
-Personal test repository for experimenting and testing various code snippets, concepts, and projects.
+纯前端 FIT 文件解析可视化工具，支持导入高驰 (COROS)、佳明 (Garmin) 等运动手表导出的 `.fit` 文件，直接在浏览器中解析并可视化运动数据。
 
-## License
+## 功能特性
 
-MIT © [zentrix566](https://github.com/zentrix566)
+- 📁 **直接导入** - 网页上选择或拖拽 FIT 文件，无需上传到服务器
+- 🔍 **自动解析** - 纯浏览器端解析，提取运动摘要和 GPS 轨迹
+- 🗺️ **地图可视化** - 交互式地图显示 GPS 轨迹，标记起点终点
+- 📊 **数据图表** - 心率变化曲线、速度变化曲线
+- ⚡ **基于 Vite** - 快速启动，支持热更新
+- 🏃 支持多种运动类型识别
+
+## 启动项目
+
+```bash
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev
+```
+
+然后在浏览器打开显示的地址（通常是 `http://localhost:5173`），就可以导入 FIT 文件了。
+
+## 构建发布
+
+```bash
+npm run build
+```
+
+构建产物在 `dist/` 目录，可以直接部署。
+
+## 使用方法
+
+1. 启动开发服务器后，打开网页
+2. 点击**选择 .fit 文件**按钮，或者直接将 `.fit` 文件拖拽到区域
+3. 等待解析完成（几秒钟）
+4. 即可在地图上看到轨迹，查看数据统计和图表
+
+## 示例数据
+
+项目中包含一个示例 FIT 文件：
+- `476407660602753025.fit` - 2026-03-29 的 42.40 公里跑步
+
+### 示例数据运动摘要
+| 参数 | 数值 |
+|--------|-------|
+| **运动类型** | 跑步 |
+| **日期** | 2026-03-29 |
+| **开始时间** | 北京时间 07:47:35 |
+| **结束时间** | 北京时间 11:58:34 |
+| **距离** | **42.40 公里** |
+| **运动时间** | 4 小时 10 分 59 秒 |
+| **卡路里** | 3745 大卡 |
+| **平均心率** | 153 次/分钟 |
+| **最大心率** | 161 次/分钟 |
+| **平均配速** | 5'53"/公里 |
+| **总爬升** | 47 米 |
+| **总下降** | 50 米 |
+
+## 项目结构
+
+```
+test-run/
+├── index.html              # 主页面
+├── main.js                # 主 JavaScript 逻辑
+├── package.json            # npm 配置
+├── 476407660602753025.fit  # 示例 FIT 文件
+├── parse_fit.py            # Python 版本 - 提取运动摘要
+├── export_fit_details.py   # Python 版本 - 导出 GPS 到 CSV
+├── fit_export.csv          # Python 版本 - 导出的 CSV 数据
+├── generate_visualization.py # Python 版本 - 生成静态可视化
+├── visualization.html      # Python 版本 - 静态可视化页面
+└── README.md
+```
+
+## 支持的运动类型
+
+- 跑步、步行、徒步、越野跑
+- 骑行（室内/室外）
+- 游泳（室内/公开水域）
+- 桨板、划船、皮划艇、冲浪
+- 滑雪、登山、力量训练、HIIT 等
+
+## 技术栈
+
+- **前端**: HTML5 + JavaScript (ES6 modules)
+- **地图**: Leaflet + Stadia Maps (免费无需 API key)
+- **图表**: Chart.js
+- **FIT 解析**: fit-file-parser (npm 包，浏览器端解析)
+- **开发服务器**: Vite
+
+## 许可证
+
+MIT © [zentrix56](https://github.com/zentrix56)

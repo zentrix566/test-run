@@ -26,6 +26,7 @@ Desktop.ini
 
 # Build
 dist/
+dist/
 build/
 *.tgz
 
